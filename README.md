@@ -42,12 +42,12 @@ Here is SfBServer2015 and SfB2016 folders components
 <img src="https://raw.githubusercontent.com/ibenbouzid/SkypeforBusiness_lab_V1/master/images/SfB2016.jpg"/>
 </a>
 
-# Software
+# Software Download
 
 You can download Skype for business eval version here :
 https://www.microsoft.com/en-gb/evalcenter/evaluate-skype-for-business-server
 
-And the Skype 2016 client Here
+And the Skype 2016 or Basic client Here
 https://products.office.com/en-gb/skype-for-business/download-app?tab=tabs-3
 
 # How to fillin parameters
