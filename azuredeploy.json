@@ -16,11 +16,6 @@
         "description": "The storage account Type used to store VHD's"
       }
     },
-    "AvailabilitySet1Name": {
-      "type": "string",
-      "minLength": 1,
-      "defaultValue": "AVailabilitySet1"
-    },
     "publicIPAddressType": {
       "type": "string",
       "allowedValues": [
@@ -63,13 +58,13 @@
       },
       "defaultValue": "https://raw.githubusercontent.com/ibenbouzid/Azure_sfb2015_lab/master"
     },
-    "_SfBshareLocation": {
+    "ShareLocation": {
       "type": "string",
       "metadata": {
         "description": "The storage account Name - not the url - where Skype for Business executable files are strored"
       }
     },
-    "_SfBshareSasToken": {
+    "ShareAccessKey": {
       "type": "string",
       "metadata": {
         "description": "The token for the share where the software is"
@@ -79,6 +74,7 @@
   "variables": {
     "apiVersion": "2015-06-15",
     "StorageAccountName": "[concat(resourceGroup().name, uniqueString(resourceGroup().id))]",
+    "AvailabilitySet1Name": "AVailabilitySet1",
     "VnetName": "Vnet1",
     "Vnet1Prefix": "10.0.0.0/16",
     "Vnet1Sub1Name": "Subnet-1",
@@ -129,7 +125,7 @@
             "value": "[parameters('StorageAccountType')]"
           },
           "AvailabilitySet1Name": {
-            "value": "[parameters('AvailabilitySet1Name')]"
+            "value": "[variables('AvailabilitySet1Name')]"
           },
           "LoadBalancerName": {
             "value": "[variables('LoadBalancerName')]"
@@ -191,7 +187,7 @@
             "value": "[variables('StorageAccountName')]"
           },
           "AvailabilitySetName": {
-            "value": "[parameters('AvailabilitySet1Name')]"
+            "value": "[variables('AvailabilitySet1Name')]"
           },
           "LoadBalancerName": {
             "value": "[variables('LoadBalancerName')]"
@@ -322,7 +318,7 @@
             "value": "[variables('StorageAccountName')]"
           },
           "AvailabilitySetName": {
-            "value": "[parameters('AvailabilitySet1Name')]"
+            "value": "[variables('AvailabilitySet1Name')]"
           },
           "LoadBalancerName": {
             "value": "[variables('LoadBalancerName')]"
@@ -394,7 +390,7 @@
             "value": "[variables('StorageAccountName')]"
           },
           "AvailabilitySetName": {
-            "value": "[parameters('AvailabilitySet1Name')]"
+            "value": "[variables('AvailabilitySet1Name')]"
           },
           "LoadBalancerName": {
             "value": "[variables('LoadBalancerName')]"
@@ -553,10 +549,10 @@
             "value": "[parameters('_artifactsLocation')]"
           },
           "_SfBshareLocation": {
-            "value": "[parameters('_SfBshareLocation')]"
+            "value": "[parameters('ShareLocation')]"
           },
           "_SfBshareSasToken": {
-            "value": "[parameters('_SfBshareSasToken')]"
+            "value": "[parameters('ShareAccessKey')]"
           }
         }
       }
@@ -592,10 +588,10 @@
             "value": "[parameters('_artifactsLocation')]"
           },
           "_SfBshareLocation": {
-            "value": "[parameters('_SfBshareLocation')]"
+            "value": "[parameters('ShareLocation')]"
           },
           "_SfBshareSasToken": {
-            "value": "[parameters('_SfBshareSasToken')]"
+            "value": "[parameters('ShareAccessKey')]"
           }
         }
       }
