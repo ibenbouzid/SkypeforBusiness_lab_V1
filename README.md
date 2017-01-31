@@ -51,7 +51,7 @@ https://products.office.com/en-gb/skype-for-business/download-app?tab=tabs-3
 
 # How to fill parameters
 
- dnsPrefix:  The DNS prefix for the public IP address used by the Load Balancer
+ "dnsPrefix":  The DNS prefix for the public IP address used by the Load Balancer
 
  domainName: The FQDN of the AD Domain eg: contoso.com or adatum.local
      
