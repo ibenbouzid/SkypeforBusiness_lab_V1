@@ -30,7 +30,11 @@ You can either deploy through the azure deploy button (which take less time) or 
 
 # Folder structure
 The folder structure inside your storage account should look like this
-
+https://raw.githubusercontent.com/ibenbouzid/Azure_sfb2015_lab/master/images/FolderStructure.jpg
+https://raw.githubusercontent.com/ibenbouzid/SkypeforBusiness_lab_V1/master/images/FolderStructure.jpg
+<a >
+<img src="https://raw.githubusercontent.com/ibenbouzid/SkypeforBusiness_lab_V1/master/images/FolderStructure.jpg"/>
+</a>
 <a >
 <img src="https://raw.githubusercontent.com/ibenbouzid/SkypeforBuiness_lab_v1/master/images/FolderStructure.jpg"/>
 </a>
