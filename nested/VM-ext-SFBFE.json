@@ -71,8 +71,8 @@
       "properties": {
         "publisher": "Microsoft.Powershell",
         "type": "DSC",
-        "typeHandlerVersion": "2.9",
-        "autoUpgradeMinorVersion": true,
+        "typeHandlerVersion": "2.21",
+        "autoUpgradeMinorVersion": false,
         "settings": {
           "modulesUrl": "[variables('SFBPrereqs-dscmoduleURL')]",
           "configurationFunction": "[variables('PrereqsFunction')]",
@@ -82,7 +82,6 @@
               "UserName": "[parameters('adminUsername')]",
               "Password": "PrivateSettingsRef:AdminPassword"
             }
-
           }
         },
         "protectedSettings": {
